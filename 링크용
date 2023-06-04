@@ -1,0 +1,32 @@
+링크
+스타일 
+			li{list-style-type: none;}
+			.menu{display:flex;margin-left:auto;}
+			a{display: block; color: black;
+			text-decoration: none; line-height: 75px;
+			padding: 0px 63.8px; font-size: 1.25em; font-style: bold;}
+			a:hover{transition: all 0.25s;
+				background: #665943;
+				color:#B2BC73;}
+			nav{width: 1000px;  height: 75px; top: 0px;left: 0px; background: 
+				#B2BC73; left: calc(50% - 500px); margin: 0; padding: 0; 
+				z-index: 5;}
+			button{width: 508px; height: 100px; background-color: #554A39 ; color:white; box-shadow: 0.4px 16px #rgba(0, 79, 255, 0.4); font-size: 48px; font-weight: bold;
+				border-radius:200px; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); transition: transition: 0.3; font-size: 2}
+			button:focus{outline: 05;} 
+			button:hover{background-color:rgba(0, 79,255,0.9); cursor:pointer;box-shadow:0 2px 4px#rgba(0, 79, 255, 0.6); font-size: 48px;  }
+			.nav{margin: auto; margin-left: auto;display: flex; height: 55px; top: 0px;left: 0px; background: #B2BC73; left: calc(50% - 50px); margin: 0; padding: 0; 
+				z-index: 5;position: sticky; justify-content: center;
+				font-weight: bold;}
+나브
+<div class="nav">
+<nav>
+	<ul class="menu">
+		<li><a href="#A">자기소개</a></li>
+		<li><a href="#B">할 수 있어요</a></li>
+		<li><a href="#C">필요해요</a></li>
+		<li><a href="#D">받았어요</a></li>
+		<li><a href="#E">입양하기</a></li>
+	</ul>
+</nav>
+</div>

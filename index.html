@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>한국 보도블럭의 역사</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&family=Noto+Sans+KR:wght@100;400;500;700;900&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+	<style>
+	html{ cursor: url(mouse.png), auto;}
+	* {margin:0;padding:0; font-family: 'Noto Sans KR', sans-serif;}
+	.section input[id*="slide"] {display:none;}
+	.section .slidewrap {max-width:1600px; height: 628px; margin:0 auto;}
+	.section .slidelist {white-space:nowrap;font-size:0;overflow:hidden;position:relative;}
+	.section .slidelist > li {display:inline-block;vertical-align:middle;width:100%;transition:all .5s;}
+	.section .slidelist > li > a {display:block;position:relative;}
+	.section .slidelist > li > a img {width:1280px; height: 628px;   margin: auto;
+    display: block;}
+	.section .slidelist label {position:absolute;z-index:10;top:50%;transform:translateY(-50%);padding:50px;cursor:pointer;}
+	.section .slidelist .textbox {position:absolute;z-index:1;top:50%;left:50%;transform:translate(-50%,-50%);line-height:1.6;text-align:center;}
+	.section .slidelist .textbox h1 {font-size: 56px; font-weight: black; opacity:0;transform:translateY(30px);transition:all .5s; position: absolute;}
+	.section .slidelist .textbox h3 {font-size:36px;color:#fff;;transform:translateY(30px);transition:all .5s;}
+	.section .slidelist .textbox p {font-size:16px;color:#fff;opacity:0;transform:translateY(30px);transition:all .5s;}
+	
+	/* input에 체크되면 슬라이드 효과 */
+	.section input[id="slide01"]:checked ~ .slidewrap .slidelist > li {transform:translateX(0%);}
+	.section input[id="slide02"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-100%);}
+	.section input[id="slide03"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-200%);}
+
+	/* input에 체크되면 텍스트 효과 */
+	.section input[id="slide01"]:checked ~ .slidewrap li:nth-child(1) .textbox h1 {opacity:1;transform:translateY(0);transition-delay:.2s;}
+	.section input[id="slide01"]:checked ~ .slidewrap li:nth-child(1) .textbox h3 {opacity:1;transform:translateY(0);transition-delay:.4s;}
+	.section input[id="slide01"]:checked ~ .slidewrap li:nth-child(1) .textbox p {opacity:1;transform:translateY(0);transition-delay:.9 s;}
+		.section input[id="slide02"]:checked ~ .slidewrap li:nth-child(2) .textbox h1 {opacity:1;transform:translateY(0);transition-delay:.2s;}
+	.section input[id="slide02"]:checked ~ .slidewrap li:nth-child(2) .textbox h3 {opacity:1;transform:translateY(0);transition-delay:.4s;}
+	.section input[id="slide02"]:checked ~ .slidewrap li:nth-child(2) .textbox p {opacity:1;transform:translateY(0);transition-delay:.9s;}
+			.section input[id="slide03"]:checked ~ .slidewrap li:nth-child(3) .textbox h1 {opacity:1;transform:translateY(0);transition-delay:.2s;}
+	.section input[id="slide03"]:checked ~ .slidewrap li:nth-child(3) .textbox h3 {opacity:1;transform:translateY(0);transition-delay:.2s;}
+	.section input[id="slide03"]:checked ~ .slidewrap li:nth-child(3) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+
+	/* 페이징 */
+	.slide-pagelist {text-align:center;padding:20px;}
+	.slide-pagelist > li {display:inline-block;vertical-align:middle;}
+	.slide-pagelist > li > label {display:block;padding:8px 205px;  margin: 200px;border-radius:30px;background:grey;margin:20px 10px;cursor:pointer;}
+	.section input[id="slide01"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(1) > label {background:limegreen;}
+	.section input[id="slide02"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(2) > label {background:limegreen;}
+	.section input[id="slide03"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(3) > label {background:limegreen;}
+        .effect-text-white {
+            display: inline-block;
+           
+            animation: shake 3s infinite;
+        }
+        
+        @keyframes shake {
+            0% {
+                transform: translateY(-10px);
+            }
+            50% {
+                transform: translateY(10px);
+            }
+            100% {
+                transform: translateY(-10px);
+            }
+        }
+                .effect-text-green {
+            display: inline-block;
+  
+            animation: lal 2s infinite;
+            
+        }
+                @keyframes shake {
+            0% {
+                transform: translateY(-10px);
+            }
+            50% {
+                transform: translateY(10px);
+            }
+            100% {
+                transform: translateY(-10px);
+            }
+        }
+                        @keyframes lal {
+            0% {
+                transform: translateY(-10px);
+            }
+            50% {
+                transform: translateY(10px);
+            }
+            100% {
+                transform: translateY(-10px);
+            }
+        }	.rot/*wrap rot*/{animation: rot 1s linear forwards;
+				animation-delay: 0.5s;}
+	.right{animation: rr 3s forwards;
+				animation-delay: 1.5s;}
+	@keyframes rot{
+				from{top: 75px; opacity: 0;}
+				to {top: 0px; opacity: 1}
+	}
+	@keyframes rr{
+			from{right: 50px; opacity: 0;}
+				to {right: 0px; opacity: 1}
+			}
+					.need1{transition: 0.3s;}
+.button {
+        display: inline-block;
+        padding: 20px 30px;
+        background-color: black;
+        color: white;
+        text-decoration: none;
+        border-radius: 100px;
+    }
+	</style>
+
+</head>
+<body>
+	<section style=" background-image:url('gb2.png'); background-attachment: fixed;background-size: cover; background-repeat: no-repeat; position: relative; background-size:cover ; width:100%; height:1400px;">
+		<div class="wow right"></div>
+						     <div style="position: relative; display:flex; width: 1000px; height:600px; padding-left: 100px; padding-top:50px;text-align: right;">
+					     	<h1 class="effect-text-green"style="font-size: 36px; color: black; z-index: 10; display: block;text-align: left;padding-top: 200px; ">보도블럭이<br> <u>정확히</u> 뭔데?</span> </h1>
+					      <p style="color: black;text-align: left;padding-top: 200px;padding-left: 100px;">보도블럭은 보행자가 통행하는 보도나 
+소위 인도를 포장하기 위한 토목자재를 말해. <br><br>
+
+보도블럭의 시초는 로마의 도로포장이 시초라고 할 수 있어.<br><br>
+
+보도블럭은 길을 걷는 시민의 안전이나 지구의 
+환경, <br>도시의 미관 등에 도움을 줄 수 있어.</p></div>	
+						     <div style="position: relative; display:flex; width: 1000px; height:400px; padding-left: 100px; padding-top:50px;text-align: right;">
+					     	<h1 class="effect-text-green"  style="font-size: 36px; color: black; z-index: 10; display: block;text-align: left;padding-top: 200px; ">보도블럭도<br> <u>유행이</u> 있어?</span> </h1>
+					      <p style="color: black;text-align: left;padding-top: 200px;padding-left: 100px;">보도블럭은 시대에 따라 변화하고 있어.<br><br>
+
+유행에 따라서 디자인이 바뀌기도 하고, 기술의 발전에 따라 배치나 소재도 바뀌지!<br>
+점자블록과 같은 기능성 블록이 등장하기도 해.<br><br>
+</p></div>	
+</div>
+	</section>
+	<section style=" background: black;width: 100%; height: 600px;">
+		<h1 style="font-size: 36px; padding-top: 200px; text-align: center; color: limegreen;"><u>그럼, 우리나라의 시대에 따른<br>보도블럭의 유행에 대해 알아보자!</u></h1>
+	</section>
+<section style="background: black; padding-bottom: 200px;">
+<div class="section">
+
+	<input type="radio" name="slide" id="slide01" checked>
+	<input type="radio" name="slide" id="slide02">
+	<input type="radio" name="slide" id="slide03">
+	<div class="slidewrap">
+		<!-- 페이징 -->
+		<ul class="slide-pagelist">
+			<li><label for="slide01"></label></li>
+			<li><label for="slide02"></label></li>
+			<li><label for="slide03"></label></li>
+		</ul>
+		<ul class="slidelist">
+			<!-- 슬라이드 영역 -->
+			<li class="slideitem">
+				<a>
+					<div class="textbox">
+						<div style="width: 1280px; height: 628px; display:flex; margin: auto; padding-left: 100px;padding-top: 50px;">
+						<div>
+						<h1 style="font-size: 100px;opacity: 0.4; color:limegreen;">1960-70</h1>
+					     <h3 style="padding-top: 150px; text-align: left;">마누라 없이는 살아도 <br><span class="limegreen" style="color: limegreen;text-align: left;">장화 없이는 못산다.</span></h3>
+					      <h3 style="font-size:14px; padding-top: 272px;font-weight: 400; opacity:1;color: lightgrey;">#시멘트블록&emsp;#비포장도로&emsp;#커다란_블록&emsp;#징검다리&emsp;#투수블록</h3>
+					      </div>
+					      <div style="position: relative; display:flex; width: 200px; height:200px;  padding-left: 330px;padding-top: 50px;text-align: right; ">
+					      <p style="color: white;">1960년~1970년대 당시에는 <span style="color: limegreen;">비포장도로</span>가 많아,<span style="color: limegreen;">'마누라 없이는 <br>살아도 장화 없이는 못산다'</span>라는 표현이 사용되던 시기였어. 물론 <br>도보블록이 우리나라에 들어오지 않은 것은 아니야. 당시에는 <br><span style="color: limegreen; ">정사각형 형태의 시멘트 블록</span>이 도보블럭으로 쓰였는데, 당연하지만 <br>지금만큼 도보가 정교하고 튼튼하지는 않았어. 평탄화 작업 없이<br> 그저 바닥에 내려놓는 것 뿐이었기에, 비가 오는 날<br>징검다리의 역할정도만 수행하는 수준이었지.  </p></div>
+
+<img src="cb1png.png" class="effect-text-green" style="position: absolute; z-index:10;width:180px ; height: 180px; padding-left: 900px;padding-top:350px; ">
+
+					</div>
+				</div>
+					<img src="./img/2028.jpg">
+				</a>
+			</li>
+			<li class="slideitem">
+								<a>
+					<div class="textbox">
+						<div style="width: 1280px; height: 628px; display:flex; margin: auto; padding-left: 100px;padding-top: 50px;">
+						<div>
+						<h1 style="font-size: 100px;color:limegreen;opacity: 0.4;">1980-90</h1>
+					      <h3 style="padding-top: 150px; text-align: left;">도보블럭에 한 발자국, <br><span class="limegreen" style="color: limegreen;text-align: left;">86아시안게임과 88올림픽</span></h3>
+					      <h3 style="font-size:14px; padding-top: 272px;font-weight: 400; opacity:1;color: lightgrey;">#88서울올림픽&emsp;#86아시안게임&emsp;#인터록킹&emsp;#S자블록&emsp;#T자블록</h3>
+					      </div>
+					      <div style="position: relative; display:flex; width: 200px; height:200px;  padding-left: 310px;padding-top:50px;text-align: right;  ">
+					      <p style="color: white">1980년~1990년대에 들어서는 우리나라에서<br> <span style="color: limegreen;">86아시안게임과 88올림픽 유치</span>를 하게 되었어.<br>당연히 외국 귀빈들이 많이 오겠지? <br>우리나라는 선진화된 모습을 보여주기 위해서, <br>여러 외국을 다니며 정보를 모으기 시작했어. <br>그때, 바닥에 깔린 보도블록들을 보게 되면서 덴마크와 협력을 맺고 <br>보도블록을 생산하기 시작해. 이때 <span style="color: limegreen;">'코단'이라는 회사를 설립</span>하고, <br>때마침 건설 호황기가 겹치며 <span style="color: limegreen;">'인터록킹 블록'</span>을<br> 전국에 깔기 시작했어. 이 호황은 90년대 초 신도시 건설때까지 이어져.</p></div>
+<img src="ib1.png" class="effect-text-green" style="position: absolute; z-index:10;width:180px ; height: 180px; padding-left: 650px;padding-top:350px;">
+<img src="ub1.png" class="effect-text-white" style="position: absolute; z-index:10;width:180px ; height: 180px; padding-left: 830px;padding-top:360px;">
+<img src="ib2.png" class="effect-text-green" style="position: absolute; z-index:10;width:180px ; height: 180px; padding-left: 1010px;padding-top:350px;">
+					</div>
+				</div>
+					<img src="./img/st2.jpg">
+				</a>
+			</li>
+			<li class="slideitem">
+								<a>
+					<div class="textbox">
+						<div style="width: 1280px; height: 628px; display:flex; margin: auto; padding-left: 100px;padding-top: 50px;">
+						<div>
+						<h1 style="font-size: 100px;opacity: 0.4; color:limegreen;">2000-</h1>
+					     <h3 style="padding-top: 150px; text-align: left;">도로 르네상스, 그리고 <br><span class="limegreen" style="color: limegreen;text-align: left;">보도블럭의 현대화</span></h3>
+					      <h3 style="font-size:14px; padding-top: 272px;font-weight: 400; opacity:1;color: lightgrey;">#도로_르네상스&emsp;#미니멀&emsp;#정사각형&emsp;#블랙_화이트&emsp;#깔끔_모던_시크</h3> 
+					      </div>
+					     <div style="position: relative; display:flex; width: 200px; height:200px;  padding-left: 310px;padding-top:50px;text-align: right;">
+					     
+					      <p style="color: white;text-align: right;">2000년대부터는 보도블럭도 조금씩 고급화되기 시작했어.<br><span style="color: limegreen;">디자인 서울 거리, 도로 르네상스</span>같은 거리 조경관리가 <br>주목받기 시작하면서 고급스러운 보도블럭들이 등장하게 돼. <br>이때 등장하게 된 블록이 <span style="color: limegreen;"> 미니멀한 직사각형, 정사각형 블록</span>이야. <br>과거의 시멘트 블록과는 다르게<span style="color: limegreen;"> 크기가 작아지고 <br>표면 처리가 고급지게</span> 변했어.<br> 색상 역시 모던한 <span style="color: limegreen;">무채색의 블록</span>들이<br> 인기를 얻게 되었지.</span></p></div>
+					      <img src="jgb.png" class="effect-text-white" style="position: absolute; z-index:10;width:180px ; height: 180px; padding-left: 970px;padding-top:360px;">
+					      <img src="jgb1.png" class="effect-text-green" style="position: absolute; z-index:10;width:180px ; height: 180px; padding-left: 770px;padding-top:370px;">
+					  </div>
+
+					</div>
+					<img src="./img/sl1.jpg">
+				</div>
+				
+				</a>
+			</li class="slideitem">
+</ul>
+	</div>
+</div>
+</section>
+	<section style="background-image: url('bb1.png'); position:absolute; z-index: 1; width: 100%;text-align: center; background-repeat: no-repeat; background-size:cover;">
+	<div style=" height: 1280px;">
+		<h1 style="font-size: 100px;opacity: 0.4; color:limegreen; padding-top: 300px;padding-bottom: 250px;">그렇다면,</h1>
+	<h1 style="font-size: 36px; color: black; z-index: 10; display: block;text-align: center; "><u>요즘 유행하는 블록</u>은 뭘까?</span> </h1>
+<div style="padding-bottom: 300px;">
+					 <p style="">요즘에 유행하는 블록은 어떤 블록일까? <br>
+					
+					 최근에 유행하는 블록들의 공통점은 기능에 집중한 블록들이라는 거야! 
+					     </p>
+					     
+					     <img src="123.jpg"><img src="123.jpg"><img src="123.jpg">
+</div>
+					
+<section class="yellow" style="font-size: 30px; background:limegreen ; background-attachment: fixed;position: relative; height: 400px;">
+	<div class="wrap" style="text-align: center; color: black;padding-top: 100px;">
+		<h3 style="color: black; margin-bottom: 20px;">더 많은 정보를 알고싶다면?</h3>
+		<div style="opacity:1;">
+<a href="https://papago.naver.com/" class="button" style="font-family: 'Jua', sans-serif; font-weight: 200;font-size: 0.75em;">보러가기</a></div>
+	</div>
+	</section>
+	</section>
+	 <script src="wow.js"></script>
+              <script>
+              new WOW().init();
+              </script>
+<script>
+              function redirectToPage() {
+      window.location.href = "./other/index.html";
+    }
+</script>
+</body>
+</html>
